@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Layouts Rústicos</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eae0b7;
+            color: #4f3b31;
+        }
+        header, footer {
+            background-color: #7a4b32;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Estilo para el Layout de Una Sola Columna */
+        .single-column {
+            background-color: #f4e1c1;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #b98f61;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .single-column h2 {
+            text-align: center;
+            color: #6b4f31;
+            font-size: 1.8em;
+        }
+        .single-column p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Estilo para el Layout de Dos Columnas */
+        .two-column {
+            display: flex;
+            margin: 20px 0;
+        }
+        .two-column .main {
+            flex: 3;
+            padding: 20px;
+            background-color: #fdf2c2;
+            border: 2px solid #b98f61;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .two-column .sidebar {
+            flex: 1;
+            background-color: #f7dbb8;
+            padding: 20px;
+            border: 2px solid #b98f61;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el Layout de Tres Columnas */
+        .three-column {
+            display: flex;
+            margin: 20px 0;
+        }
+        .three-column .sidebar-left, .three-column .sidebar-right {
+            flex: 1;
+            background-color: #f7dbb8;
+            padding: 20px;
+            border: 2px solid #b98f61;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .three-column .main {
+            flex: 3;
+            padding: 20px;
+            background-color: #fdf2c2;
+            border: 2px solid #b98f61;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el Layout de CSS Grid */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .grid-layout div {
+            padding: 20px;
+            background-color: #f7dbb8;
+            border: 2px solid #b98f61;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .grid-layout .main {
+            background-color: #fdf2c2;
+            border: 2px solid #b98f61;
+        }
+
+        /* Estilo para el Layout de Flexbox */
+        .flexbox-layout {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .flexbox-layout .sidebar {
+            flex: 0.5;
+            background-color: #f7dbb8;
+            padding: 20px;
+            border: 2px solid #b98f61;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .flexbox-layout .main {
+            flex: 1;
+            padding: 20px;
+            background-color: #fdf2c2;
+            border: 2px solid #b98f61;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ejemplo de Diferentes Layouts Rústicos</h1>
+    </header>
+
+    <!-- Layout de Una Sola Columna -->
+    <section class="single-column">
+        <h2>Layout de Una Sola Columna</h2>
+        <p>Este es un diseño de una sola columna, ideal para páginas simples como blogs o artículos. Con colores cálidos y un estilo rústico que da una sensación acogedora.</p>
+    </section>
+
+    <!-- Layout de Dos Columnas -->
+    <section class="two-column">
+        <div class="main">
+            <h2>Layout de Dos Columnas - Contenido Principal</h2>
+            <p>Este diseño incluye un contenido principal a la izquierda y una barra lateral a la derecha, utilizando tonos terracota y dorados que crean un ambiente rústico.</p>
+        </div>
+        <div class="sidebar">
+            <h3>Barra Lateral</h3>
+            <p>Contenido adicional en la barra lateral, con un fondo cálido que acompaña la estética rústica.</p>
+        </div>
+    </section>
+
+    <!-- Layout de Tres Columnas -->
+    <section class="three-column">
+        <div class="sidebar-left">
+            <h3>Barra Lateral Izquierda</h3>
+            <p>Contenido de la barra lateral izquierda, con tonos dorados que complementan el esquema rústico.</p>
+        </div>
+        <div class="main">
+            <h2>Layout de Tres Columnas - Contenido Principal</h2>
+            <p>Este diseño tiene tres columnas: una barra lateral izquierda, el contenido principal, y una barra lateral derecha. El color cálido en cada sección transmite una sensación acogedora.</p>
+        </div>
+        <div class="sidebar-right">
+            <h3>Barra Lateral Derecha</h3>
+            <p>Contenido de la barra lateral derecha, con la misma paleta de colores para un efecto armonioso.</p>
+        </div>
+    </section>
+
+    <!-- Layout de CSS Grid -->
+    <section class="grid-layout">
+        <div class="sidebar-left">
+            <h3>Barra Lateral Izquierda</h3>
+            <p>Contenido de la barra lateral izquierda en un diseño de Grid, con un tono cálido que se ajusta a la atmósfera rústica.</p>
+        </div>
+        <div class="main">
+            <h2>Layout de Grid - Contenido Principal</h2>
+            <p>Este diseño utiliza CSS Grid para organizar las columnas de forma ordenada, manteniendo el toque rústico.</p>
+        </div>
+        <div class="sidebar-right">
+            <h3>Barra Lateral Derecha</h3>
+            <p>Contenido de la barra lateral derecha, con un fondo suave para no desentonar con el conjunto.</p>
+        </div>
+    </section>
+
+    <!-- Layout de Flexbox -->
+    <section class="flexbox-layout">
+        <div class="sidebar">
+            <h3>Barra Lateral</h3>
+            <p>Contenido de la barra lateral utilizando Flexbox, con un fondo cálido que ayuda a reforzar el estilo rústico.</p>
+        </div>
+        <div class="main">
+            <h2>Layout de Flexbox - Contenido Principal</h2>
+            <p>Este diseño usa Flexbox para distribuir el espacio entre las columnas, mientras mantiene una atmósfera acogedora y rústica.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Pie de página</p>
+    </footer>
+</body>
+</html>
